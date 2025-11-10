@@ -1,5 +1,5 @@
 \documentclass[11pt]{article}
-
+\usepackage[final]{acl}
 % Change "review" to "final" to generate the final (sometimes called camera-ready) version.
 % Change to "preprint" to generate a non-anonymous version with page numbers.
 \usepackage[]{acl}
@@ -24,11 +24,11 @@
 %
 % and set <dim> to something 5cm or larger.
 
-\title{Group X Progress Report:\\My Group's Project Name}
+\title{Group 50 Progress Report:\\Neural Network-Based Wildfire Risk Classification}
 
 
-\author{First Author, Second Author, Third Author \\
-  \texttt{\{macid1,macid2,macid3\}@mcmaster.ca} }
+\author{Eric Solak, Tyler Yue, Ahmed Sahi \\
+  \texttt{\{solake, yuet5, sahia8\}@mcmaster.ca} }
 
 %\author{
 %  \textbf{First Author\textsuperscript{1}},
@@ -75,19 +75,72 @@
 
 \section{Introduction}
 
-Here, write a brief introduction to the problem you are solving. This can be adapted from your problem description and motivation from the original proposal. This should be around 0.25-0.5 pages.
+Wildfires are a growing threat to infrastructure, ecosystems, and human safety. In addition to the immediate danger of fire, wildfire smoke can travel thousands of kilometers, degrading air quality and affecting
+millions of people \citet{NASAwildfires}. Predicting the likelihood of wildfires in advance can help authorities, first responders, and communities with preparation, resource allocation, and reduce potential damage.
+
+This project aims to classify regions into low, medium, and high wildfire risk using a machine learning model trained on environmental and meteorological data. The resulting risk predictions can support proactive
+decision making and reduce the overall impact of wildfires on both people and the environment.
 
 \section{Related Work}
 
-Here, talk about the related work you encountered for your approach. Cite at least 5 references. Refer to item 2. No one has done exactly your task? Write about the most similar thing you can find. This should be around 0.25-0.5 pages.
+Predicting wildfires is a sought after problem in both environmental science and machine learning. Existing approaches can be categorized into deterministic models, statistical models, and machine learning models.
+
+Deterministic models, such as the Canadian Forest Fire Danger Rating System (CFFDRS) rely on empirical formulae derived from field experiments to estimate wildfire risk based on meteorological factors \citet{cffdrs}. These models are
+generally used in operational settings but are limited in their ability to capture non-linear interactions between variables.
+
+Statistical models include regression-based and Bayesian approaches that predict wildfire likelihood using historical fire and weather data \citet{statisticalregression2024, bayesian2019}. These methods are effective in identifying trends but they are limited in
+their ability to capture rare or extreme weather conditions, which is critical for high-risk classification.
+
+Machine learning approaches have used tree-ensemble methods such as XGBoost to classify wildfire risk based on tabular environmental data \citet{XGBoost}. More recently however, neural networks have been trained on both satellite imagery
+and meteorological data to predict wildfire spread \citet{MLWildfire}. These models can learn complex, non-linear relationships but require preprocessing and normalization of inputs.
 
 \section{Dataset}
+For this project, we will utilize a Wildfire Prediction Dataset found on Kaggle \citet{kaggle_dataset}. This dataset contains 118858 entries and 17 attributes, with no missing values. Further, all values are numerical (float64), 
+simplifying any data manipulation by avoiding issues revolving around categorical data. 
+\subsection{Data Sources}
+There are two main sources used by this dataset: NASA's FIRMS VIIRS SCC system for fire radiative power (FRP) data, 
+and Open-Meteo's meteorological data \citet{FIRMS, open-meteo-api}. As these sources are open and publicly available, the data used is compliant with all terms of service.
+\subsection{Features}\label{Features}
+The dataset contains the following features:
+\begin{itemize}
+  \item \textbf{daynight\_N}: Indicator for whether the observation was taken during the day or night.
+  \item \textbf{lat, lon}: Latitude and longitude coordinates of the location where the observation was recorded.
+  \item \textbf{fire\_weather\_index}: An index representing the overall fire risk based on meteorological conditions.
+  \item \textbf{pressure\_mean}: Mean atmospheric pressure at the location.
+  \item \textbf{wind\_direction\_mean, wind\_direction\_std}: Mean and standard deviation of wind direction.
+  \item \textbf{solar\_radiation\_mean}: Average solar radiation received.
+  \item \textbf{dewpoint\_mean}: Average dew point temperature.
+  \item \textbf{cloud\_cover\_mean}: Average cloud cover percentage.
+  \item \textbf{evapotranspiration\_total}: Total evapotranspiration over the observation period.
+  \item \textbf{humidity\_min}: Minimum humidity recorded.
+  \item \textbf{temp\_mean, temp\_range}: Mean temperature and temperature range.
+  \item \textbf{wind\_speed\_max}: Maximum wind speed observed.
+  \item \textbf{occured}: Binary flag indicating whether a fire occurred (1) or not (0).
+  \item \textbf{frp}: Fire Radiative Power, measuring the intensity of a fire if it occurred.
+\end{itemize}
 
-You should write about your dataset here, following the guidelines regarding item 1. This section may be 0.5-1 pages. Depending on your specific dataset, you may want to include subsections for the preprocessing, annotation, etc.
+\subsection{Preprocessing}
+The dataset requires minimal preprocessing due to its numerical format. The preprocessing steps used are:
+\begin{itemize}
+  \item Clipping negative values: Negative \textit{fire\_weather\_index} values are set to 0, as negative FWI is meaningless (i.e. negative risk is nonsensical).
+  \item Feature normalization: All numeric features are standardized to facilitate stable training of the neural network. Each feature was scaled to have a mean of 0
+  and a standard deviation of 1, ensuring that features with larger ranges do not dominate the training process.
+\end{itemize}
+
+\subsection{Data Split}
+A standard training/validation/testing split will be used, 70\% for training, 15\% for validation, 15\% for testing.
 
 \section{Features}
 
-Describe any features you used for your model, or how your data was input to your model. Are you doing feature engineering or feature selection? Are you learning embeddings? Is it all part of one neural network? Refer to item 2. This may range from 0.25 pages to 0.5 pages.
+All 17 numerical features are used as input to the neural network. These features, described in Section \ref{Features}, include positional, meteorological and environmental data.
+Positional features (\textit{lat}, \textit{lon}) provide the geographical context, important to the input as wildfire risk is often region-specific due to climate and vegetation.
+Meteorological features, such as \textit{temp\_mean}, \textit{temp\_range}, \textit{humidity\_min}, \textit{pressure\_mean}, \textit{cloud\_cover\_mean}, \textit{dewpoint\_mean}, \textit{solar\_radiation\_mean}, etc,
+describe the atmospheric conditions that directly influence fire ignition and propagation. Environmental features, including \textit{evapotranspiration\_total}, \textit{fire\_weather\_index}, etc, describe the conditions
+that influence fire behaviour and ignition potential. 
+
+The model's target variable is the wildfire risk category, derived from the \textit{fire\_weather\_index} and \textit{occurred} variables in the dataset,
+classified into low, medium, or high risk. By combining multiple features that capture positional, meteorological, and environmental conditions, the neural network can learn complex, non-linear relationships 
+that contribute to wildfire risk. 
 
 \section{Implementation}
 
@@ -99,7 +152,14 @@ How are you evaluating your model? What results do you have so far? What are you
 
 \section{Feedback and Plans}
 
-Write about your plans for the remainder of the project. This should include a discussion of the feedback you received from your TA, and how you plan to improve your approach. Reflect on your implementation and areas for improvement. Refer to item 6. This may be around 0.5 pages.
+During the project, our TA provided guidance on narrowing the scope of our wildfire risk classification task and ensuring that our model design aligns with the project requirements. 
+In particular, we were advised to focus on using the numerical environmental and meteorological data effectively, rather than attempting to include complex satellite imagery or external data sources, 
+which could overcomplicate the project given the time constraints. This advice helped us narrow the project scope and prioritize the features most relevant to predicting wildfire risk.
+The TA also emphasized the importance of properly preprocessing features, specifically the negative and extreme values in \textit{fire\_weather\_index} to ensure stable neural network training.
+
+Based on this feedback and reflections on the project's progress so far, our plan for the remaining weeks is to finalize the preprocessing pipeline to ensure all unrealistic values are handled appropriately (extreme \textit{fire\_weather\_index} values). 
+We also plan on refining the presentation of the results and conduct exploratory analysis. This includes generating detailed visualizations of feature importance using partial dependence plots to explain the model's predictions 
+for specific regions. Including these graphs in the final report will help communicate both the strengths and limitations of the model.
 
 \section{Template Notes}
 
@@ -176,9 +236,12 @@ This an example cross-reference to Equation~\ref{eq:example}. You can also write
 % \section*{Limitations}
 
 \section*{Team Contributions}
-
-Write in this section a few sentences describing the contributions of each team member. What did each member work on? Refer to item 7.
-
+\begin{itemize}
+  \item \textbf{Eric Solak: } Created Team Contract. Authored and completed Project Proposal sections \textit{Overview}, and \textit{Task Definition}. Set up the GitHub repository, including modularization, project structuring, separation of concerns. 
+  Authored and completed Project Progress Report sections 1 \textit{Introduction}, 2 \textit{Related Work}, 3 \textit{Dataset}, 4 \textit{Features}, and 7 \textit{Feedback and Plans}.
+  \item \textbf{Tyler Yue: }
+  \item \textbf{Ahmed Sahi: }
+\end{itemize}
 % Bibliography entries for the entire Anthology, followed by custom entries
 %\bibliography{custom,anthology-overleaf-1,anthology-overleaf-2}
 
