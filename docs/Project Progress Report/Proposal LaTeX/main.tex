@@ -122,7 +122,7 @@ The dataset contains the following features:
 \subsection{Preprocessing}
 The dataset requires minimal preprocessing due to its numerical format. The preprocessing steps used are:
 \begin{itemize}
-  \item Clipping negative values: Negative \textit{fire\_weather\_index} values are set to 0, as negative FWI is meaningless (i.e. negative risk is nonsensical).
+  \item Clipping negative values: Negative \textit{fire\_weather\_index} values are set to 0, as negative FWI is meaningless (i.e., negative risk is nonsensical).
   \item Feature normalization: All numeric features are standardized to facilitate stable training of the neural network. Each feature was scaled to have a mean of 0
   and a standard deviation of 1, ensuring that features with larger ranges do not dominate the training process.
 \end{itemize}
@@ -148,7 +148,25 @@ Describe your model and implementation here. Refer to item 4. This may take arou
 
 \section{Results and Evaluation}
 
-How are you evaluating your model? What results do you have so far? What are your baselines? Refer to item 5. This may take around 0.5 pages.
+Our model performs a three-way data split into training, test, and validation datasets. We used a stratified split to maintain the distribution of our target variable \textit{risk\_level} between the sets. The purpose of the splits are as follows:
+
+\begin{enumerate}
+    \item \textbf{Training set:} used to fit the model parameters and to update the weights during backpropagation.
+    \item \textbf{Validation set:} used to determine performance during training and used for our early stop gradient descent and dynamic learning rate scheduling.
+    \item \textbf{Test set:} used to evaluate the model performance on unseen data and provide an accurate measurement of our model's ability to generalize and predict on new data.
+\end{enumerate}
+
+Our evaluation metrics are based on the classification performance. We computed the precision, recall, and F1-score for each risk class, together with the overall accuracy and a confusion matrix. Accuracy serves as the primary evaluation metric, while the F1-score provides a more balanced measure of performance across all risk categories.
+
+The neural-network classifier (three hidden layers with ReLU activations and Dropout) was trained on GPU for approximately 120 epochs with early stopping. The model achieved a validation accuracy of about 78 before convergence and a test accuracy of 78.5. The F1 scores show relatively good performance:
+
+\begin{itemize}
+    \item \textbf{Low-risk (class 0):} F1 = 0.80
+    \item \textbf{Medium-risk (class 1):} F1 = 0.74
+    \item \textbf{High-risk (class 2):} F1 = 0.80
+\end{itemize}
+
+The confusion matrix shows that most misclassifications are between medium and high-risk wildfires. Precision and recall remain above 0.75 for all classes.
 
 \section{Feedback and Plans}
 
