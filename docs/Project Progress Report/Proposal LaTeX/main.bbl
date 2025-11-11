@@ -1,4 +1,90 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Ando and Zhang(2005)}]{Ando2005}
+Rie~Kubota Ando and Tong Zhang. 2005.
+\newblock A framework for learning predictive structures from multiple tasks
+  and unlabeled data.
+\newblock \emph{Journal of Machine Learning Research}, 6:1817--1853.
+
+\bibitem[{Andrew and Gao(2007)}]{andrew2007scalable}
+Galen Andrew and Jianfeng Gao. 2007.
+\newblock Scalable training of {L1}-regularized log-linear models.
+\newblock In \emph{Proceedings of the 24th International Conference on Machine
+  Learning}, pages 33--40.
+
+\bibitem[{Cisneros et~al.(2024)Cisneros, Richards, Dahal, Lombardo, and
+  Huser}]{statisticalregression2024}
+Daniela Cisneros, Jordan Richards, Ashok Dahal, Luigi Lombardo, and Raphaël
+  Huser. 2024.
+\newblock \href {https://doi.org/10.1016/j.spasta.2024.100811} {Deep
+  statistical regression for jointly moderate and extreme australian
+  wildfires}.
+\newblock \emph{Spatial Statistics}.
+
+\bibitem[{{Government of Canada}(2025)}]{cffdrs}
+{Government of Canada}. 2025.
+\newblock \href {https://cwfis.cfs.nrcan.gc.ca/background/summary/fdr}
+  {Canadian forest fire danger rating system}.
+
+\bibitem[{Gusfield(1997)}]{Gusfield:97}
+Dan Gusfield. 1997.
+\newblock \emph{Algorithms on Strings, Trees and Sequences}.
+\newblock Cambridge University Press, Cambridge, UK.
+
+\bibitem[{Hu et~al.(2025)Hu, Bispo, Rue, DaCamara, Swallow, and
+  Castro-Camilo}]{XGBoost}
+Chenglei Hu, Regina~Baltazar Bispo, Håvard Rue, Carlos~C. DaCamara, Ben
+  Swallow, and Daniela Castro-Camilo. 2025.
+\newblock \href {https://arxiv.org/abs/2508.09896} {Xgboost meets inla: a
+  two-stage spatio-temporal forecasting of wildfires in portugal}.
+\newblock \emph{Cornell University}.
+
+\bibitem[{Joseph et~al.(2019)Joseph, Rossi, Mietkiewicz, Mahood, Cattau, Denis,
+  Nagy, Iglesias, Abatzoglou, and Balch}]{bayesian2019}
+Maxwell~B Joseph, Matthew~W Rossi, Nathan~P Mietkiewicz, Adam~L Mahood, Megan~E
+  Cattau, Lise Ann~St Denis, R~Chelsea Nagy, Virginia Iglesias, John~T
+  Abatzoglou, and Jennifer~K Balch. 2019.
+\newblock \href {https://pmc.ncbi.nlm.nih.gov/articles/PMC6851762/} {Deep
+  statistical regression for jointly moderate and extreme australian
+  wildfires}.
+\newblock \emph{National Center for Biotechnology Information}.
+
+\bibitem[{NASA(2025{\natexlab{a}})}]{FIRMS}
+NASA. 2025{\natexlab{a}}.
+\newblock \href {https://firms.modaps.eosdis.nasa.gov} {Fire information for
+  resource management system}.
+
+\bibitem[{NASA(2025{\natexlab{b}})}]{NASAwildfires}
+NASA. 2025{\natexlab{b}}.
+\newblock \href
+  {https://science.nasa.gov/earth/explore/wildfires-and-climate-change/}
+  {Wildfires and climate change}.
+\newblock \emph{NASA Science}.
+
+\bibitem[{Open-Meteo(2025)}]{open-meteo-api}
+Open-Meteo. 2025.
+\newblock \href {https://open-meteo.com/} {Free weather api}.
+
+\bibitem[{Rasooli and Tetreault(2015)}]{rasooli-tetrault-2015}
+Mohammad~Sadegh Rasooli and Joel~R. Tetreault. 2015.
+\newblock \href {http://arxiv.org/abs/1503.06733} {Yara parser: {A} fast and
+  accurate dependency parser}.
+\newblock \emph{Computing Research Repository}, arXiv:1503.06733.
+\newblock Version 2.
+
+\bibitem[{Shadrin et~al.(2024)Shadrin, Illarionova, Gubanov, Evteeva,
+  Mironenko, Levchunets, Belousov, and Burnaev}]{MLWildfire}
+Dmitrii Shadrin, Svetlana Illarionova, Fedor Gubanov, Ksenia Evteeva, Maksim
+  Mironenko, Ivan Levchunets, Roman Belousov, and Evgeny Burnaev. 2024.
+\newblock \href {https://doi.org/10.1038/s41598-024-52821-x} {Wildfire
+  spreading prediction using multimodal data and deep neural network approach}.
+\newblock \emph{Scientific Reports}.
+
+\bibitem[{Vijayaragul(2025)}]{kaggle_dataset}
+V.~R. Vijayaragul. 2025.
+\newblock \href
+  {https://www.kaggle.com/datasets/vijayaragulvr/wildfire-prediction} {Global
+  wildfire dataset}.
 
 \end{thebibliography}
