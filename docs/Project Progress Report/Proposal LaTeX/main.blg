@@ -11,44 +11,48 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Database file #1: custom.bib
-You've used 13 entries,
+Warning--I didn't find a database entry for "Ando2005"
+Warning--I didn't find a database entry for "andrew2007scalable"
+Warning--I didn't find a database entry for "rasooli-tetrault-2015"
+You've used 9 entries,
             3764 wiz_defined-function locations,
-            811 strings with 8126 characters,
-and the built_in function-call counts, 8428 in all, are:
-= -- 709
-> -- 418
-< -- 12
-+ -- 167
-- -- 124
-* -- 523
-:= -- 1338
-add.period$ -- 49
-call.type$ -- 13
-change.case$ -- 108
-chr.to.int$ -- 16
-cite$ -- 13
-duplicate$ -- 493
-empty$ -- 613
-format.name$ -- 156
-if$ -- 1842
+            785 strings with 7481 characters,
+and the built_in function-call counts, 5882 in all, are:
+= -- 470
+> -- 339
+< -- 7
++ -- 137
+- -- 103
+* -- 378
+:= -- 967
+add.period$ -- 32
+call.type$ -- 9
+change.case$ -- 79
+chr.to.int$ -- 12
+cite$ -- 9
+duplicate$ -- 328
+empty$ -- 404
+format.name$ -- 119
+if$ -- 1266
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 106
-newline$ -- 66
-num.names$ -- 52
-pop$ -- 277
+missing$ -- 71
+newline$ -- 45
+num.names$ -- 36
+pop$ -- 200
 preamble$ -- 1
-purify$ -- 93
+purify$ -- 70
 quote$ -- 0
-skip$ -- 480
+skip$ -- 329
 stack$ -- 0
-substring$ -- 204
-swap$ -- 237
-text.length$ -- 1
+substring$ -- 101
+swap$ -- 156
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 114
+type$ -- 81
 warning$ -- 0
-while$ -- 44
+while$ -- 27
 width$ -- 0
-write$ -- 156
+write$ -- 103
+(There were 3 warnings)

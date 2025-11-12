@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.6)  10 NOV 2025 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.6)  11 NOV 2025 19:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -413,62 +413,58 @@ Underfull \hbox (badness 3895) in paragraph at lines 125--126
 
 
 [2]
-<example-image-golden.pdf, id=111, 324.82053pt x 200.75pt>
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 175.
-(pdftex.def)             Requested size: 219.08614pt x 135.40543pt.
+
+Package natbib Warning: Citation `Ando2005' undefined on input line 236.
+
+
+Package natbib Warning: Citation `andrew2007scalable' undefined on input line 236.
+
+
+Package natbib Warning: Citation `rasooli-tetrault-2015' undefined on input line 236.
+
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 178.
-<example-image-a.pdf, id=112, 321.2pt x 240.9pt>
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 183.
-(pdftex.def)             Requested size: 218.51521pt x 163.89069pt.
-<example-image-b.pdf, id=113, 321.2pt x 240.9pt>
-File: example-image-b.pdf Graphic file (type pdf)
-<use example-image-b.pdf>
-Package pdftex.def Info: example-image-b.pdf  used on input line 184.
-(pdftex.def)             Requested size: 218.51521pt x 163.89069pt.
+(Font)              scaled to size 10.95pt on input line 238.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 194.
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.95pt on input line 198.
+(Font)              <10.95> on input line 238.
 
 
 (main.bbl
 
-[3 <C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/mwe/example-image-golden.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 78--83
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 54--59
 \T1/ptm/m/n/10 (+20) Kse-nia Ev-teeva, Mak-sim Miro-nenko, Ivan
  []
 
 )
 
+Package natbib Warning: There were undefined citations.
+
+
+
 
 
 [4
 
- <C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/mwe/example-image-a.pdf> <C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/mwe/example-image-b.pdf>] (main.aux)
+] (main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-10-09>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C412A1A3C00DFA441965FCFF9E4B3412;1817.
+(rerunfilecheck)             Checksum: D0E88906F484F984A0A4FBC879824EFE;1443.
  ) 
 Here is how much of TeX's memory you used:
- 14190 strings out of 468080
- 230220 string characters out of 5425772
- 682388 words of memory out of 5000000
- 42386 multiletter control sequences out of 15000+600000
- 670596 words of font info for 243 fonts, out of 8000000 for 9000
+ 14082 strings out of 468080
+ 228036 string characters out of 5425772
+ 681985 words of memory out of 5000000
+ 42317 multiletter control sequences out of 15000+600000
+ 668426 words of font info for 220 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,10n,93p,1109b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (4 pages, 175563 bytes).
+ 90i,10n,93p,1109b,594s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (4 pages, 124002 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
- 42640 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
+ 42089 words of extra memory for PDF output out of 42996 (max. 10000000)
 
