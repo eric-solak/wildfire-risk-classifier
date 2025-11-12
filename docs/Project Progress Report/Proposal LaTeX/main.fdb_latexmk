@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1762799402.16601 "main.aux" "main.bbl" "main" 1762800225.43885 0
+["bibtex main"] 1762906042.27067 "main.aux" "main.bbl" "main" 1762906044.71375 0
   "./acl_natbib.bst" 1762440048 47126 3d1af46d62cc9172ef6e42b56c1cd613 ""
-  "./custom.bib" 1762792504 4747 b34f17d45ecc27e4da6ad9688fd85cb6 ""
-  "main.aux" 1762800224 4657 3151057abb89665b76594458b0c32220 "pdflatex"
+  "./custom.bib" 1762906038 2676 c52d67bc61a8a6a393a7d1ffab797b6f ""
+  "main.aux" 1762906043 2817 5940b2335bb3c77ad7167cb7b7e07606 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1762800222.93013 "c:/Users/chill/OneDrive/Desktop/4AL3/wildfire-risk-classifier/docs/Project Progress Report/Proposal LaTeX/main.tex" "main.pdf" "main" 1762800225.43992 0
-  "C:/Users/chill/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1762784489 96176 40a8022d15c5925d7081b1ad66e03248 ""
+["pdflatex"] 1762906042.71759 "c:/Users/chill/OneDrive/Desktop/4AL3/wildfire-risk-classifier/docs/Project Progress Report/Proposal LaTeX/main.tex" "main.pdf" "main" 1762906044.71482 0
+  "C:/Users/chill/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1762804864 96176 40a8022d15c5925d7081b1ad66e03248 ""
   "C:/Users/chill/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1762480739 13321867 e7e36c4cf7788cf9397ee30e7a7faad0 ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc" 1557959318 7631 5169ff1acd97ff1c4ab83563c99f96f4 ""
@@ -38,9 +38,6 @@
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb" 1557879974 55526 866691d4af8dece5424ad744e8c0133d ""
-  "C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb" 1256929440 96107 daf52840b555e3b38f9679b629b5e2df ""
-  "C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb" 1256929440 97155 ffb6880a68751002f414154d64548ca3 ""
-  "C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb" 1256929440 27863 09ce3735688ffde955e72da27c95b61a ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb" 1136871348 44729 fea0975e20ec51c992338362f05f1146 ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb" 1136871348 46026 687528a208fbfc1f00832bb96cccebbb ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb" 1136871348 45458 504e2b06fa82109d168c7a0afb09e145 ""
@@ -103,12 +100,6 @@
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype.sty" 1752015111 102775 cc4629d7100508b1ba679322aef9b545 ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-cmr.cfg" 1752015111 22906 b0be544692bb405a84d147a96af5d777 ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-ptm.cfg" 1752015111 12427 78d94d2b9d095b6021a1cc87fb6d8cd7 ""
-  "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/mwe/example-image-a.pdf" 1522425337 12160 f5a33a472bc2acb8800c3e00764d8ad1 ""
-  "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/mwe/example-image-a.tex" 1522425337 466 d1a94627f2e1cbf8876e228d48d436ec ""
-  "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/mwe/example-image-b.pdf" 1522425337 17201 df559bd1afe49e7edc5b8a552f742861 ""
-  "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/mwe/example-image-b.tex" 1522425337 466 69705384919c6dc961bf49b977dd41f4 ""
-  "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/mwe/example-image-golden.pdf" 1522425337 36332 080a76f423652779ae897d1deb722084 ""
-  "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/mwe/example-image-golden.tex" 1522425337 419 be27de6c6c3bc091e3f49d4eecaba90f ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/natbib/natbib.sty" 1292249081 46712 1c8843383c0bd05870c45fa0ebea6cc2 ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/t1ptm.fd" 1585253778 817 61d7da1e9f9e74989b196d147e623736 ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/times.sty" 1585926771 888 8e0e5c8cca7b18e0400f97f5a2b90a99 ""
@@ -120,11 +111,11 @@
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/chill/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "acl.sty" 1762440048 11927 e2c027f483aa40e577ed34264c8b0655 ""
-  "c:/Users/chill/OneDrive/Desktop/4AL3/wildfire-risk-classifier/docs/Project Progress Report/Proposal LaTeX/main.tex" 1762800221 14513 810441d8e012c0fd92a22cfb19aaa21a ""
-  "main.aux" 1762800224 4657 3151057abb89665b76594458b0c32220 "pdflatex"
-  "main.bbl" 1762799402 3897 576166d65f2501510a4402817bd07d37 "bibtex main"
-  "main.out" 1762800224 1817 c412a1a3c00dfa441965fcff9e4b3412 "pdflatex"
-  "main.tex" 1762800221 14513 810441d8e012c0fd92a22cfb19aaa21a ""
+  "c:/Users/chill/OneDrive/Desktop/4AL3/wildfire-risk-classifier/docs/Project Progress Report/Proposal LaTeX/main.tex" 1762906016 16171 b66e023a08c2330308837243c335c61a ""
+  "main.aux" 1762906043 2817 5940b2335bb3c77ad7167cb7b7e07606 "pdflatex"
+  "main.bbl" 1762906042 2871 70463e48c03f4557f6a22db083a2ba6c "bibtex main"
+  "main.out" 1762906043 1443 d0e88906f484f984a0a4fbc879824efe "pdflatex"
+  "main.tex" 1762906016 16171 b66e023a08c2330308837243c335c61a ""
   (generated)
   "main.aux"
   "main.log"

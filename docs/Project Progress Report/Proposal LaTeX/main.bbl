@@ -1,17 +1,5 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
-
-\bibitem[{Ando and Zhang(2005)}]{Ando2005}
-Rie~Kubota Ando and Tong Zhang. 2005.
-\newblock A framework for learning predictive structures from multiple tasks
-  and unlabeled data.
-\newblock \emph{Journal of Machine Learning Research}, 6:1817--1853.
-
-\bibitem[{Andrew and Gao(2007)}]{andrew2007scalable}
-Galen Andrew and Jianfeng Gao. 2007.
-\newblock Scalable training of {L1}-regularized log-linear models.
-\newblock In \emph{Proceedings of the 24th International Conference on Machine
-  Learning}, pages 33--40.
 
 \bibitem[{Cisneros et~al.(2024)Cisneros, Richards, Dahal, Lombardo, and
   Huser}]{statisticalregression2024}
@@ -26,11 +14,6 @@ Daniela Cisneros, Jordan Richards, Ashok Dahal, Luigi Lombardo, and Raphaël
 {Government of Canada}. 2025.
 \newblock \href {https://cwfis.cfs.nrcan.gc.ca/background/summary/fdr}
   {Canadian forest fire danger rating system}.
-
-\bibitem[{Gusfield(1997)}]{Gusfield:97}
-Dan Gusfield. 1997.
-\newblock \emph{Algorithms on Strings, Trees and Sequences}.
-\newblock Cambridge University Press, Cambridge, UK.
 
 \bibitem[{Hu et~al.(2025)Hu, Bispo, Rue, DaCamara, Swallow, and
   Castro-Camilo}]{XGBoost}
@@ -65,13 +48,6 @@ NASA. 2025{\natexlab{b}}.
 \bibitem[{Open-Meteo(2025)}]{open-meteo-api}
 Open-Meteo. 2025.
 \newblock \href {https://open-meteo.com/} {Free weather api}.
-
-\bibitem[{Rasooli and Tetreault(2015)}]{rasooli-tetrault-2015}
-Mohammad~Sadegh Rasooli and Joel~R. Tetreault. 2015.
-\newblock \href {http://arxiv.org/abs/1503.06733} {Yara parser: {A} fast and
-  accurate dependency parser}.
-\newblock \emph{Computing Research Repository}, arXiv:1503.06733.
-\newblock Version 2.
 
 \bibitem[{Shadrin et~al.(2024)Shadrin, Illarionova, Gubanov, Evteeva,
   Mironenko, Levchunets, Belousov, and Burnaev}]{MLWildfire}
