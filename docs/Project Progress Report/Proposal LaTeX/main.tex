@@ -144,7 +144,15 @@ that contribute to wildfire risk.
 
 \section{Implementation}
 
-Describe your model and implementation here. Refer to item 4. This may take around a page.
+This classifier was implemented in Python using the PyTorch and Scikit-learn libraries. The system was broken up into three modules: preprocessing, model training, and evaluation, each implemented in a separate Jupyter notebook.
+
+\subsection{Preprocessing}
+
+In the \texttt{01\_preprocessing.ipynb} notebook, the dataset is loaded and cleaned to remove any empty rows. Since Fire Weather Index (FWI) is meant to be non-negative, all negative values were set to 0. In next iterations, extreme values on the high end will also be corrected (as an FWI of 200, for example, is not physically possible). The data set was labeled high, medium, or low risk based on whether or not a fire occurred, and \textit{Natural Resources Canada}' FWI categorization. If a fire occurred or the FWI was greater than 30, the risk level was high. If no fire occurred, but the FWI was between 10 and 30, the risk level was medium. If no fire occurred and the FWI was below 10, the risk level was low. Each feature was standardized using the z-score transformation, ensuring that features of larger magnitude don't dominate gradient updates. A 70/15/15 split was applied for training, validation, and test datasets.
+
+\subsection{Model Architecture}
+
+The neural network, implemented in \texttt{02\_model\_training.ipynb}, uses a feed-forward MLP optimized for meteorological data. The model takes 17 input features and predicts the probability of belonging to one of the three wildfire risk classes. A combination of linear, ReLU, softmax and dropout functions will be used in this model. With further trials in next iterations, a final setup will be determined. The model was compiled using a learning rate of 0.001 and the categorical cross-entropy loss function. Class weighting was applied so that errors in underrepresented categories (e.g., medium-risk) incurred a higher penalty. Model training ran for up to 120 epochs with early stopping (patience = 10).
 
 \section{Results and Evaluation}
 
