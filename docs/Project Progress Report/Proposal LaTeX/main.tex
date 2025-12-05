@@ -262,17 +262,13 @@ High Risk (2) & 0.93 & 0.91 & 0.92 \\
 \end{tabular}
 \end{table}
 
-\begin{figure}[H]
-\centering
+\begin{center}
 \includegraphics[width=0.7\linewidth]{fig_3.png}
-\caption{Training and validation loss and validation accuracy across epochs. The model shows smooth convergence and stable generalization, with early stopping preventing overfitting after approximately 90 epochs.}
-\label{fig:trainval}
-\end{figure}
+\caption{Figure 3: Training and validation loss and validation accuracy across epochs}
+\end{center}
 
-\begin{figure}[H]
-\centering
-\caption{Confusion matrix of wildfire risk classification model. Most confusion occurs between medium and high risk, while low risk is correctly identified in nearly all cases.}
-\label{fig:confmatrix}
+\begin{center}
+\caption{Figure 4: Confusion matrix of wildfire risk classification model}
 \begin{tabular}{r|ccc}
 \toprule
  & \multicolumn{3}{c}{\textbf{Predicted Class}} \\
@@ -283,9 +279,9 @@ Medium & 97 & \textbf{4274} & 221 \\
 High & 21 & 189 & \textbf{4043} \\
 \bottomrule
 \end{tabular}
-\end{figure}
+\end{center}
 
-The confusion matrix (Figure~\ref{fig:confmatrix}) shows that most predictions lie along the diagonal, indicating accurate classification across all classes.
+The confusion matrix (Figure~4) shows that most predictions lie along the diagonal, indicating accurate classification across all classes.
 
 \subsection{General Strengths}
 
