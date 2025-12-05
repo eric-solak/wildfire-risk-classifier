@@ -142,17 +142,51 @@ The model's target variable is the wildfire risk category, derived from the \tex
 classified into low, medium, or high risk. By combining multiple features that capture positional, meteorological, and environmental conditions, the neural network can learn complex, non-linear relationships 
 that contribute to wildfire risk. 
 
-\section{Implementation}
-
-This classifier was implemented in Python using the PyTorch and Scikit-learn libraries. The system was broken up into three modules: preprocessing, model training, and evaluation, each implemented in a separate Jupyter notebook.
-
-\subsection{Preprocessing}
-
-In the \texttt{01\_preprocessing.ipynb} notebook, the dataset is loaded and cleaned to remove any empty rows. Since Fire Weather Index (FWI) is meant to be non-negative, all negative values were set to 0. In next iterations, extreme values on the high end will also be corrected (as an FWI of 200, for example, is not physically possible). The data set was labeled high, medium, or low risk based on whether or not a fire occurred, and \textit{Natural Resources Canada}' FWI categorization. If a fire occurred or the FWI was greater than 30, the risk level was high. If no fire occurred, but the FWI was between 10 and 30, the risk level was medium. If no fire occurred and the FWI was below 10, the risk level was low. Each feature was standardized using the z-score transformation, ensuring that features of larger magnitude don't dominate gradient updates. A 70/15/15 split was applied for training, validation, and test datasets.
-
 \subsection{Model Architecture}
 
 The neural network, implemented in \texttt{02\_model\_training.ipynb}, uses a feed-forward MLP optimized for meteorological data. The model takes 17 input features and predicts the probability of belonging to one of the three wildfire risk classes. A combination of linear, ReLU, softmax and dropout functions will be used in this model. With further trials in next iterations, a final setup will be determined. The model was compiled using a learning rate of 0.001 and the categorical cross-entropy loss function. Class weighting was applied so that errors in underrepresented categories (e.g., medium-risk) incurred a higher penalty. Model training ran for up to 120 epochs with early stopping (patience = 10).
+
+The final model implemented is a Neural Network consisting of 4 fully connected layers. The model achieved an accuracy of 0.9448 on our test set. The architecture is as follows:
+
+\begin{itemize}
+    \item Input Layer: 16 Features
+    \item Hidden Layer 1: 256 neurons
+    \item Hidden Layer 2: 128 neurons
+    \item Hidden Layer 3: 64 neurons
+    \item Output Layer: 3 neurons
+\end{itemize}
+
+The activation function used is ReLU.
+
+Regularization consisted of the following methods:
+\begin{itemize}
+    \item L2 Regularization using weight decay of strength $1 \times 10^{-4}$
+    \item Batch Normalization after each hidden layer
+    \item Dropout on each hidden layer with a dropout rate of 0.3 for the first two layers and 0.2 for the last hidden layer
+\end{itemize}
+
+\subsection{Model Training and Evaluation}
+
+Comparing our model with a simple baseline of a majority vote strategy we achieved much higher accuracy. Since there are 3 classes and low is the most common the majority vote strategy entails voting for the `Low' class each time. This results in a test accuracy of 0.4998. Our model significantly outperformed this benchmark.
+
+The model utilized a cross entropy loss function. Since the number of samples in each class was uneven we applied a weighted cross entropy loss to ensure that minority classes have a higher weight during training to prevent the model from being biased towards the majority class. This is shown in Figure~1.
+
+\begin{center}
+  \includegraphics[width=1.0\linewidth]{fig_1.png}
+  
+  \small Figure 1: Weighted cross entropy loss applied to compensate for class imbalance.
+\end{center}
+
+The optimization function used is the AdamW optimizer. We used this optimization function over a traditional SGD optimizer since it experienced faster convergence due to its parameter updating methodology which takes into account the moving averages of the mean and variance of the gradient as opposed to the SGD optimizer which updates based on the gradient of the loss.
+
+The results of holding out specific features in the model is shown in Figure~2. This chart shows the effect on the accuracy of the model when holding out each specific feature. This shows that the most important features are \texttt{pressure\_mean} and \texttt{humidity\_min}. 
+
+\begin{center}
+  \includegraphics[width=1.0\linewidth]{fig_2.png}
+
+  \small Model accuracy when holding out individual features during training.
+
+\end{center}
 
 \section{Results and Evaluation}
 
