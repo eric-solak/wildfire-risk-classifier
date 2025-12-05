@@ -211,14 +211,21 @@ Our metrics from the previous progress report were adequate, and with our modifi
 
 \section{Progress}
 
-During the project, our TA provided guidance on narrowing the scope of our wildfire risk classification task and ensuring that our model design aligns with the project requirements. 
-In particular, we were advised to focus on using the numerical environmental and meteorological data effectively, rather than attempting to include complex satellite imagery or external data sources, 
-which could overcomplicate the project given the time constraints. This advice helped us narrow the project scope and prioritize the features most relevant to predicting wildfire risk.
-The TA also emphasized the importance of properly preprocessing features, specifically the negative and extreme values in \textit{fire\_weather\_index} to ensure stable neural network training.
+In our progress report, we highlighted several key goals for the final iteration of the project. These included finalizing the data preprocessing module by properly cleaning unrealistic values in the \texttt{fire\_weather\_index}, analyzing the relative importance of specific features, and developing a more robust neural network through targeted tuning and regularization.
 
-Based on this feedback and reflections on the project's progress so far, our plan for the remaining weeks is to finalize the preprocessing pipeline to ensure all unrealistic values are handled appropriately (extreme \textit{fire\_weather\_index} values). 
-We also plan on refining the presentation of the results and conduct exploratory analysis. This includes generating detailed visualizations of feature importance using partial dependence plots to explain the model's predictions 
-for specific regions. Including these graphs in the final report will help communicate both the strengths and limitations of the model.
+We were able to successfully implement these planned changes. In preprocessing, negative and extreme \texttt{fire\_weather\_index} values were clipped to ensure physical validity. Two additional interaction features,
+\[
+\text{temp\_humidity\_interaction} = \text{temp\_mean} \times (1 - \frac{\text{humidity\_min}}{100})
+\]
+and
+\[
+\text{wind\_fwi\_interaction} = \text{wind\_speed\_max} \times \text{fire\_weather\_index},
+\]
+were engineered to better capture the combined effects of meteorological variables on wildfire risk. These features proved especially helpful in distinguishing between medium- and high-risk cases.
+
+Our plan evolved slightly throughout the course of the semester. Initially, we considered experimenting with deeper or hybrid models; however, we ultimately chose to keep the project scope narrow and focus on maximizing the efficiency of a neural network applied to the base dataset. The neural network architecture from earlier iterations was significantly modified, resulting in a more stable and computationally efficient design, as detailed in the \textit{Implementation} section.
+
+Overall, our final model remains consistent with our original objectives while reflecting a refined and more focused technical approach. The adjustments made to preprocessing and network design substantially improved model stability and interpretability, demonstrating a successful follow-through on our original project plan.
 
 \section{Error Analysis}
 
