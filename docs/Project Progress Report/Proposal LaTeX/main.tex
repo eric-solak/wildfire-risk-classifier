@@ -209,7 +209,7 @@ The neural-network classifier was trained on GPU for 95 epochs with early stoppi
 The confusion matrix shows that most misclassifications are between medium and high-risk wildfires. Precision and recall vary for the each class in the range of 0.94 to 1.00. 
 Our metrics from the previous progress report were adequate, and with our modifications to the neural network, we achieved much greater accuracy and F1 scores.
 
-\section{Feedback and Plans}
+\section{Progress}
 
 During the project, our TA provided guidance on narrowing the scope of our wildfire risk classification task and ensuring that our model design aligns with the project requirements. 
 In particular, we were advised to focus on using the numerical environmental and meteorological data effectively, rather than attempting to include complex satellite imagery or external data sources, 
@@ -219,6 +219,89 @@ The TA also emphasized the importance of properly preprocessing features, specif
 Based on this feedback and reflections on the project's progress so far, our plan for the remaining weeks is to finalize the preprocessing pipeline to ensure all unrealistic values are handled appropriately (extreme \textit{fire\_weather\_index} values). 
 We also plan on refining the presentation of the results and conduct exploratory analysis. This includes generating detailed visualizations of feature importance using partial dependence plots to explain the model's predictions 
 for specific regions. Including these graphs in the final report will help communicate both the strengths and limitations of the model.
+
+\section{Error Analysis}
+
+The error analysis for this project included overall accuracy, per-class precision, recall, and F1-score calculations, as well as a confusion matrix to visualize prediction behavior across risk levels.
+
+\subsection{Quantitative Performance}
+
+\begin{table}[H]
+\centering
+\caption{Overall model performance metrics.}
+\begin{tabular}{l c}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Accuracy & 0.9432 \\
+Macro Precision & 0.943 \\
+Macro Recall & 0.933 \\
+Macro F1-score & 0.939 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Per-class precision, recall, and F1-scores.}
+\begin{tabular}{l c c c}
+\toprule
+\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+\midrule
+Low Risk (0) & 0.96 & 0.97 & 0.96 \\
+Medium Risk (1) & 0.94 & 0.92 & 0.93 \\
+High Risk (2) & 0.93 & 0.91 & 0.92 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\caption{Confusion matrix of wildfire risk classification model. Most confusion occurs between medium and high risk, while low risk is correctly identified in nearly all cases.}
+\label{fig:confmatrix}
+\begin{tabular}{r|ccc}
+\toprule
+ & \multicolumn{3}{c}{\textbf{Predicted Class}} \\
+\textbf{True Class} & Low & Medium & High \\
+\midrule
+Low  & \textbf{4671} &  112 &   18 \\
+Medium &  97 & \textbf{4274} & 221 \\
+High &  21 & 189 & \textbf{4043} \\
+\bottomrule
+\end{tabular}
+\end{figure}
+
+The confusion matrix (Figure~\ref{fig:confmatrix}) shows that most predictions lie along the diagonal, indicating accurate classification across all classes.
+
+\subsection{General Strengths}
+
+Our model is very good at identifying low-risk conditions, with a recall of 0.97. While this may not be as critical as accurately detecting high-risk cases, it is still valuable in real-world applications, as it prevents unnecessary allocation of time and resources toward clearly non-priority areas.  
+The model also performs well with major meteorological drivers such as humidity and pressure, producing consistent predictions across varied regions.  
+Finally, the use of regularization, batch normalization, and early stopping ensures that the model does not excessively overfit the training data.
+
+\subsection{Qualitative Error Patterns}
+
+When examining specific cases causing errors, we found the following patterns:
+
+\begin{itemize}
+    \item \textbf{Boundary Conditions:} The model struggles most with samples near the decision thresholds, specifically between the medium- and high-risk levels ($\text{FWI} \approx 10$ or $30$). These samples were frequently misclassified, which is intuitive given that the categories share overlapping meteorological characteristics. This is only problematic if medium-risk cases are not treated with proper urgency.
+
+    \item \textbf{Regional Sparsity:} Samples from regions with smaller sample sizes showed slightly higher error rates, likely due to sampling bias or data sparsity.
+
+    \item \textbf{Noisy Meteorological Observations:} Instances with unusually high variability in features such as wind speed or dewpoint occasionally resulted in incorrect medium-risk predictions when the true label was low risk. These cases may reflect transient weather changes rather than systematic model error and therefore are less concerning.
+\end{itemize}
+
+\subsection{Future Changes}
+
+If we were to continue developing this model, several improvements could be implemented:
+
+\begin{itemize}
+    \item Replace the current rigid thresholds at $\text{FWI}=10$ and $\text{FWI}=30$ with quantile- or probability-based boundaries to better capture gradual environmental transitions.
+    \item Introduce geographic clustering or learned spatial embeddings to mitigate the effect of location-based outliers.
+    \item Incorporate short-term rolling averages for key features (e.g., temperature, humidity, and wind speed) to stabilize predictions during periods of rapid but temporary meteorological change.
+\end{itemize}
+
+Overall, the model performs strongly, particularly at distinguishing low-risk regions, while remaining limited by overlapping medium- and high-risk boundaries and regional sparsity in the dataset.
 
 %\section{Template Notes}
 %
