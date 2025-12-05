@@ -17,6 +17,8 @@
 \usepackage{microtype}
 \usepackage{inconsolata}
 \usepackage{graphicx}
+\usepackage{amsmath}
+
 
 % If the title and author information does not fit in the area allocated, uncomment the following
 %
@@ -213,14 +215,12 @@ Our metrics from the previous progress report were adequate, and with our modifi
 
 In our progress report, we highlighted several key goals for the final iteration of the project. These included finalizing the data preprocessing module by properly cleaning unrealistic values in the \texttt{fire\_weather\_index}, analyzing the relative importance of specific features, and developing a more robust neural network through targeted tuning and regularization.
 
-We were able to successfully implement these planned changes. In preprocessing, negative and extreme \texttt{fire\_weather\_index} values were clipped to ensure physical validity. Two additional interaction features,
-\[
-\text{temp\_humidity\_interaction} = \text{temp\_mean} \times (1 - \frac{\text{humidity\_min}}{100})
-\]
-and
-\[
-\text{wind\_fwi\_interaction} = \text{wind\_speed\_max} \times \text{fire\_weather\_index},
-\]
+We were able to successfully implement these planned changes. In preprocessing, negative and extreme \texttt{fire\_weather\_index} values were clipped to ensure physical validity. Two additional interaction features were engineered:
+
+\textbf{temp\_humidity\_interaction}: computed as \texttt{temp\_mean * (1 - humidity\_min / 100)}.
+
+\textbf{wind\_fwi\_interaction}: computed as \texttt{wind\_speed\_max * fire\_weather\_index}.
+
 were engineered to better capture the combined effects of meteorological variables on wildfire risk. These features proved especially helpful in distinguishing between medium- and high-risk cases.
 
 Our plan evolved slightly throughout the course of the semester. Initially, we considered experimenting with deeper or hybrid models; however, we ultimately chose to keep the project scope narrow and focus on maximizing the efficiency of a neural network applied to the base dataset. The neural network architecture from earlier iterations was significantly modified, resulting in a more stable and computationally efficient design, as detailed in the \textit{Implementation} section.
@@ -233,52 +233,60 @@ The error analysis for this project included accuracy, per-class precision, reca
 
 \subsection{Quantitative Performance}
 
-\begin{table}[H]
-\centering
-\caption{Overall model performance metrics.}
+\begin{center}
 \begin{tabular}{l c}
-\toprule
+\hline
 \textbf{Metric} & \textbf{Value} \\
-\midrule
+\hline
 Accuracy & 0.9432 \\
 Macro Precision & 0.943 \\
 Macro Recall & 0.933 \\
 Macro F1-score & 0.939 \\
-\bottomrule
+\hline
 \end{tabular}
-\end{table}
 
-\begin{table}[H]
-\centering
-\caption{Per-class precision, recall, and F1-scores.}
+\small Table 1: Overall model performance metrics.
+\end{center}
+
+\vspace{1em}
+
+\begin{center}
 \begin{tabular}{l c c c}
-\toprule
+\hline
 \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
-\midrule
+\hline
 Low Risk (0) & 0.96 & 0.97 & 0.96 \\
 Medium Risk (1) & 0.94 & 0.92 & 0.93 \\
 High Risk (2) & 0.93 & 0.91 & 0.92 \\
-\bottomrule
+\hline
 \end{tabular}
-\end{table}
 
-\begin{center}
-\includegraphics[width=0.7\linewidth]{fig_3.png}
-\caption{Figure 3: Training and validation loss and validation accuracy across epochs}
+\small Table 2: Per-class precision, recall, and F1-scores.
 \end{center}
 
+\vspace{1em}
+
 \begin{center}
-\caption{Figure 4: Confusion matrix of wildfire risk classification model}
+\includegraphics[width=1.0\linewidth]{fig_3.png}
+
+\small Figure 3: Training and validation loss and validation accuracy across epochs.
+\end{center}
+
+\vspace{1em}
+
+\begin{center}
 \begin{tabular}{r|ccc}
-\toprule
+\hline
  & \multicolumn{3}{c}{\textbf{Predicted Class}} \\
 \textbf{True Class} & Low & Medium & High \\
-\midrule
-Low  & \textbf{4671} & 112 & 18 \\
-Medium & 97 & \textbf{4274} & 221 \\
-High & 21 & 189 & \textbf{4043} \\
-\bottomrule
+\hline
+Low    & \textbf{4671} & 112 & 18 \\
+Medium & 97            & \textbf{4274} & 221 \\
+High   & 21            & 189 & \textbf{4043} \\
+\hline
 \end{tabular}
+
+\small Figure 4: Confusion matrix of wildfire risk classification model.
 \end{center}
 
 The confusion matrix (Figure~4) shows that most predictions lie along the diagonal, indicating accurate classification across all classes.
