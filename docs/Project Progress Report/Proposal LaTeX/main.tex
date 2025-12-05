@@ -81,7 +81,7 @@ millions of people \citet{NASAwildfires}. Predicting the likelihood of wildfires
 This project aims to classify regions into low, medium, and high wildfire risk using a machine learning model trained on environmental and meteorological data. The resulting risk predictions can support proactive
 decision making and reduce the overall impact of wildfires on both people and the environment.
 
-\section{Related Work}
+\subsection{Related Work}
 
 Predicting wildfires is a sought after problem in both environmental science and machine learning. Existing approaches can be categorized into deterministic models, statistical models, and machine learning models.
 
@@ -142,9 +142,9 @@ The model's target variable is the wildfire risk category, derived from the \tex
 classified into low, medium, or high risk. By combining multiple features that capture positional, meteorological, and environmental conditions, the neural network can learn complex, non-linear relationships 
 that contribute to wildfire risk. 
 
-\subsection{Model Architecture}
+\section{Implementation}
 
-The neural network, implemented in \texttt{02\_model\_training.ipynb}, uses a feed-forward MLP optimized for meteorological data. The model takes 17 input features and predicts the probability of belonging to one of the three wildfire risk classes. A combination of linear, ReLU, softmax and dropout functions will be used in this model. With further trials in next iterations, a final setup will be determined. The model was compiled using a learning rate of 0.001 and the categorical cross-entropy loss function. Class weighting was applied so that errors in underrepresented categories (e.g., medium-risk) incurred a higher penalty. Model training ran for up to 120 epochs with early stopping (patience = 10).
+The neural network, implemented in \texttt{02\_model\_training.ipynb}, uses a feed-forward MLP optimized for meteorological data. The model takes 16 input features and predicts the probability of belonging to one of the three wildfire risk classes. A combination of linear, ReLU, softmax and dropout functions were used in this model. Model training ran for up to 95 epochs with early stopping (patience = 5).
 
 The final model implemented is a Neural Network consisting of 4 fully connected layers. The model achieved an accuracy of 0.9448 on our test set. The architecture is as follows:
 
@@ -164,8 +164,6 @@ Regularization consisted of the following methods:
     \item Batch Normalization after each hidden layer
     \item Dropout on each hidden layer with a dropout rate of 0.3 for the first two layers and 0.2 for the last hidden layer
 \end{itemize}
-
-\subsection{Model Training and Evaluation}
 
 Comparing our model with a simple baseline of a majority vote strategy we achieved much higher accuracy. Since there are 3 classes and low is the most common the majority vote strategy entails voting for the `Low' class each time. This results in a test accuracy of 0.4998. Our model significantly outperformed this benchmark.
 
@@ -200,15 +198,16 @@ Our model performs a three-way data split into training, test, and validation da
 
 Our evaluation metrics are based on the classification performance. We computed the precision, recall, and F1-score for each risk class, together with the overall accuracy and a confusion matrix. Accuracy serves as the primary evaluation metric, while the F1-score provides a more balanced measure of performance across all risk categories.
 
-The neural-network classifier (three hidden layers with ReLU activations and Dropout) was trained on GPU for approximately 120 epochs with early stopping. The model achieved a validation accuracy of about 61 before convergence and a test accuracy of 63.7. The F1 scores show relatively good performance:
+The neural-network classifier was trained on GPU for 95 epochs with early stopping. The model achieved a validation accuracy of 0.9439 before convergence and a test accuracy of 0.9432. The F1 scores show relatively good performance:
 
 \begin{itemize}
-    \item \textbf{Low-risk (class 0):} F1 = 0.68
-    \item \textbf{Medium-risk (class 1):} F1 = 0.49
-    \item \textbf{High-risk (class 2):} F1 = 0.66
+    \item \textbf{Low-risk (class 0):} F1 = 0.96
+    \item \textbf{Medium-risk (class 1):} F1 = 0.93
+    \item \textbf{High-risk (class 2):} F1 = 0.92
 \end{itemize}
 
-The confusion matrix shows that most misclassifications are between medium and high-risk wildfires. Precision and recall vary for the each class in the range of 0.45 to 0.88. 
+The confusion matrix shows that most misclassifications are between medium and high-risk wildfires. Precision and recall vary for the each class in the range of 0.94 to 1.00. 
+Our metrics from the previous progress report were adequate, and with our modifications to the neural network, we achieved much greater accuracy and F1 scores.
 
 \section{Feedback and Plans}
 
@@ -280,7 +279,7 @@ for specific regions. Including these graphs in the final report will help commu
   \item \textbf{Eric Solak: } Created Team Contract. Authored and completed Project Proposal sections \textit{Overview}, and \textit{Task Definition}. Set up the GitHub repository, including modularization, project structuring, separation of concerns. 
   Authored and completed Project Progress Report sections 1 \textit{Introduction}, 2 \textit{Related Work}, 3 \textit{Dataset}, 4 \textit{Features}, and 7 \textit{Feedback and Plans}. Implemented final neural network architecture
   and fixed data leakage to achieve ~90\% accuracy in final model.
-  \item \textbf{Tyler Yue: } Authored and completed Project Proposal section \textit{Results and Evaluation}. Coded parts of the model including the selection of layers in the neural network and adding a class weighting to improve accuracy by modifying the loss penalty for classess with less datapoints.
+  \item \textbf{Tyler Yue: } Authored and completed Project Proposal section \textit{Results and Evaluation}. Coded parts of the model including the selection of layers in the neural network and adding a class weighting to improve accuracy by modifying the loss penalty for classess with less datapoints. Completed sections 4 and sections 5 of the report and updated to meet new model specifications and results. Tuned parameters of the model to increase accuracy including adjusting the epochs patience and activation functions. Created diagrams for inclusion in report. 
   \item \textbf{Ahmed Sahi: } Coded the preprocessing steps in notebook 1, the model setup in notebook 2, and the evaluation metrics in notebook 3. Authored and completed Project Proposal section \textit{Implementation}.
 \end{itemize}
 % Bibliography entries for the entire Anthology, followed by custom entries
