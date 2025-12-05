@@ -229,7 +229,7 @@ Overall, our final model remains consistent with our original objectives while r
 
 \section{Error Analysis}
 
-The error analysis for this project included overall accuracy, per-class precision, recall, and F1-score calculations, as well as a confusion matrix to visualize prediction behavior across risk levels.
+The error analysis for this project included accuracy, per-class precision, recall, and F1-score calculations, as well as a confusion matrix to visualize prediction behavior across risk levels.
 
 \subsection{Quantitative Performance}
 
@@ -264,6 +264,13 @@ High Risk (2) & 0.93 & 0.91 & 0.92 \\
 
 \begin{figure}[H]
 \centering
+\includegraphics[width=0.7\linewidth]{fig_3.png}
+\caption{Training and validation loss and validation accuracy across epochs. The model shows smooth convergence and stable generalization, with early stopping preventing overfitting after approximately 90 epochs.}
+\label{fig:trainval}
+\end{figure}
+
+\begin{figure}[H]
+\centering
 \caption{Confusion matrix of wildfire risk classification model. Most confusion occurs between medium and high risk, while low risk is correctly identified in nearly all cases.}
 \label{fig:confmatrix}
 \begin{tabular}{r|ccc}
@@ -271,9 +278,9 @@ High Risk (2) & 0.93 & 0.91 & 0.92 \\
  & \multicolumn{3}{c}{\textbf{Predicted Class}} \\
 \textbf{True Class} & Low & Medium & High \\
 \midrule
-Low  & \textbf{4671} &  112 &   18 \\
-Medium &  97 & \textbf{4274} & 221 \\
-High &  21 & 189 & \textbf{4043} \\
+Low  & \textbf{4671} & 112 & 18 \\
+Medium & 97 & \textbf{4274} & 221 \\
+High & 21 & 189 & \textbf{4043} \\
 \bottomrule
 \end{tabular}
 \end{figure}
@@ -282,33 +289,21 @@ The confusion matrix (Figure~\ref{fig:confmatrix}) shows that most predictions l
 
 \subsection{General Strengths}
 
-Our model is very good at identifying low-risk conditions, with a recall of 0.97. While this may not be as critical as accurately detecting high-risk cases, it is still valuable in real-world applications, as it prevents unnecessary allocation of time and resources toward clearly non-priority areas.  
-The model also performs well with major meteorological drivers such as humidity and pressure, producing consistent predictions across varied regions.  
-Finally, the use of regularization, batch normalization, and early stopping ensures that the model does not excessively overfit the training data.
+Our model is very good at identifying low-risk conditions, with a recall of 0.97. While this is not as valuable as high accuracy of high-risk identification, in a real-world use case it would prevent the need for time and resources to be used to further investigate cases that are clearly not a priority. The model is also very adept at handling major meteorological drivers such as humidity and pressure, producing consistent predictions across varied regions. Lastly, the use of regularization and early stopping ensures our model does not excessively overfit.
 
 \subsection{Qualitative Error Patterns}
 
 When examining specific cases causing errors, we found the following patterns:
 
 \begin{itemize}
-    \item \textbf{Boundary Conditions:} The model struggles most with samples near the decision thresholds, specifically between the medium- and high-risk levels ($\text{FWI} \approx 10$ or $30$). These samples were frequently misclassified, which is intuitive given that the categories share overlapping meteorological characteristics. This is only problematic if medium-risk cases are not treated with proper urgency.
-
-    \item \textbf{Regional Sparsity:} Samples from regions with smaller sample sizes showed slightly higher error rates, likely due to sampling bias or data sparsity.
-
-    \item \textbf{Noisy Meteorological Observations:} Instances with unusually high variability in features such as wind speed or dewpoint occasionally resulted in incorrect medium-risk predictions when the true label was low risk. These cases may reflect transient weather changes rather than systematic model error and therefore are less concerning.
+    \item The model somewhat struggles with samples near the decision thresholds, specifically for medium and high-risk levels ($\text{fire\_weather\_index} \approx 10$ or $30$). These samples were the most frequently misclassified, which makes intuitive sense as the two categories share overlapping meteorological characteristics. This is only problematic if medium-risk cases are not treated with proper urgency.
+    \item Additionally, samples from regions with small sample sizes showed slightly higher error rates. This can be explained as a simple sampling error.
+    \item Similarly, samples with meteorological observations that strayed significantly from the mean (such as wind speed or dewpoint) occasionally led to incorrect medium-risk predictions when the true label was low risk. These cases may reflect rapid changes in weather patterns but are not overly problematic, as they are essentially lesser false negatives.
 \end{itemize}
 
 \subsection{Future Changes}
 
-If we were to continue developing this model, several improvements could be implemented:
-
-\begin{itemize}
-    \item Replace the current rigid thresholds at $\text{FWI}=10$ and $\text{FWI}=30$ with quantile- or probability-based boundaries to better capture gradual environmental transitions.
-    \item Introduce geographic clustering or learned spatial embeddings to mitigate the effect of location-based outliers.
-    \item Incorporate short-term rolling averages for key features (e.g., temperature, humidity, and wind speed) to stabilize predictions during periods of rapid but temporary meteorological change.
-\end{itemize}
-
-Overall, the model performs strongly, particularly at distinguishing low-risk regions, while remaining limited by overlapping medium- and high-risk boundaries and regional sparsity in the dataset.
+If we were to continue developing this model, the following improvements could be implemented. The current rigid thresholds at $\text{FWI} = 10$ and $30$ could be replaced with quantile- or probability-based thresholds, better reflecting the gradual nature of environmental transitions. Clustering based on geographical region may also help mitigate some of the concerns around locational outliers. Lastly, using short-term rolling averages for certain features would help stabilize errors caused by erratic but temporary weather conditions.
 
 %\section{Template Notes}
 %
