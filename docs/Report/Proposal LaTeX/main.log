@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.6)  2 DEC 2025 14:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.6)  8 MAR 2026 11:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/chill/OneDrive/Desktop/4AL3/wildfire-risk-classifier/docs/Project Progress Report/Proposal LaTeX/main.tex"
-(c:/Users/chill/OneDrive/Desktop/4AL3/wildfire-risk-classifier/docs/Project Progress Report/Proposal LaTeX/main.tex
+**"c:/Users/chill/OneDrive/Desktop/wildfire-risk-classifier/wildfire-risk-classifier/docs/Report/Proposal LaTeX/main.tex"
+(c:/Users/chill/OneDrive/Desktop/wildfire-risk-classifier/wildfire-risk-classifier/docs/Report/Proposal LaTeX/main.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-10-09>
 (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -258,46 +258,116 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 )
 \Gin@req@height=\dimen170
 \Gin@req@width=\dimen171
+) (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/06/16 v2.17y AMS math features
+\@mathmargin=\skip56
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks25
+\ex@=\dimen172
+)) (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen173
+) (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count305
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count306
+\leftroot@=\count307
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count308
+\DOTSCASE@=\count309
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box54
+\strutbox@=\box55
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen174
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count310
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count311
+\dotsspace@=\muskip18
+\c@parentequation=\count312
+\dspbrk@lvl=\count313
+\tag@help=\toks26
+\row@=\count314
+\column@=\count315
+\maxfields@=\count316
+\andhelp@=\toks27
+\eqnshift@=\dimen175
+\alignsep@=\dimen176
+\tagshift@=\dimen177
+\tagwidth@=\dimen178
+\totwidth@=\dimen179
+\lineht@=\dimen180
+\@envbody=\toks28
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks29
+LaTeX Info: Redefining \[ on input line 2949.
+LaTeX Info: Redefining \] on input line 2950.
 ) (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count305
+\l__color_backend_stack_int=\count317
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
  (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
-\scratchdimen=\dimen172
-\scratchbox=\box54
-\nofMPsegments=\count307
-\nofMParguments=\count308
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count309
-\MPscratchDim=\dimen173
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count318
+\scratchdimen=\dimen181
+\scratchbox=\box56
+\nofMPsegments=\count319
+\nofMParguments=\count320
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count321
+\MPscratchDim=\dimen182
+\MPnumerator=\count322
+\makeMPintoPDFobject=\count323
+\everyMPtoPDFconversion=\toks31
 ) (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
@@ -338,18 +408,18 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 71.
+Package hyperref Info: Link coloring ON on input line 73.
 (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 71.
-Package microtype Info: Applying patch `item' on input line 71.
-Package microtype Info: Applying patch `toc' on input line 71.
-Package microtype Info: Applying patch `eqnum' on input line 71.
-Package microtype Info: Applying patch `footnote' on input line 71.
-Package microtype Info: Applying patch `verbatim' on input line 71.
-LaTeX Info: Redefining \microtypesetup on input line 71.
+LaTeX Info: Redefining \microtypecontext on input line 73.
+Package microtype Info: Applying patch `item' on input line 73.
+Package microtype Info: Applying patch `toc' on input line 73.
+Package microtype Info: Applying patch `eqnum' on input line 73.
+Package microtype Info: Applying patch `footnote' on input line 73.
+Package microtype Info: Applying patch `verbatim' on input line 73.
+LaTeX Info: Redefining \microtypesetup on input line 73.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -367,29 +437,23 @@ Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
 ) (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 72.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 72.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 72.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 72.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 74.
  (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 72.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 74.
  (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 12.0pt on input line 72.
+(Font)              scaled to size 12.0pt on input line 74.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 106.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 108.
 (C:\Users\chill\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -399,36 +463,85 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 []\T1/ptm/m/n/10.95 (+20) Clipping neg-a-tive val-ues: Neg-a-tive
  []
 
 
-Underfull \hbox (badness 3895) in paragraph at lines 125--126
+Underfull \hbox (badness 3895) in paragraph at lines 127--128
 \T1/ptm/m/it/10.95 (+20) fire_weather_index \T1/ptm/m/n/10.95 (+20) val-ues are set to 0,
  []
 
 
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.95pt on input line 151.
+(Font)              scaled to size 10.95pt on input line 149.
 
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 \T1/ptm/m/n/10.95 (+20) The neu-ral net-work, im-ple-mented in
  []
 
 
 
+[2]
+<fig_1.png, id=109, 570.933pt x 860.013pt>
+File: fig_1.png Graphic file (type png)
+<use fig_1.png>
+Package pdftex.def Info: fig_1.png  used on input line 175.
+(pdftex.def)             Requested size: 219.08614pt x 330.01027pt.
 
 
-[3]
-Underfull \hbox (badness 1603) in paragraph at lines 249--250
+<fig_2.png, id=111, 648.9846pt x 565.8741pt>
+File: fig_2.png Graphic file (type png)
+<use fig_2.png>
+Package pdftex.def Info: fig_2.png  used on input line 185.
+(pdftex.def)             Requested size: 219.08614pt x 191.03038pt.
+
+
+[3 <./fig_1.png> <./fig_2.png>]
+Underfull \hbox (badness 2608) in paragraph at lines 220--221
+[]\T1/ptm/b/n/10.95 (+20) temp_humidity_interaction\T1/ptm/m/n/10.95 (+20) : com-puted as
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+[]\T1/ptm/b/n/10.95 (+20) wind_fwi_interaction\T1/ptm/m/n/10.95 (+20) : com-puted as
+ []
+
+
+
+
+Overfull \hbox (16.46323pt too wide) in paragraph at lines 254--263
+ [] 
+ []
+
+<fig_3.png, id=125, 739.26187pt x 363.60844pt>
+File: fig_3.png Graphic file (type png)
+<use fig_3.png>
+Package pdftex.def Info: fig_3.png  used on input line 270.
+(pdftex.def)             Requested size: 219.08614pt x 107.75734pt.
+
+
+[4 <./fig_3.png>]
+Underfull \hbox (badness 3536) in paragraph at lines 303--304
+\T1/ptm/m/n/10.95 (+20) i-cally for medium and high-risk lev-els
+ []
+
+
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 371--372
 \T1/ptm/m/n/10.95 (+20) Pro-posal sec-tion \T1/ptm/m/it/10.95 (+20) Re-sults and Eval-u-a-tion\T1/ptm/m/n/10.95 (+20) .
  []
 
+
+Underfull \hbox (badness 5431) in paragraph at lines 372--373
+[]\T1/ptm/b/n/10.95 (+20) Ahmed Sahi:  \T1/ptm/m/n/10.95 (+20) Au-thored and com-
+ []
+
 (main.bbl
+
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 54--59
 \T1/ptm/m/n/10 (+20) Kse-nia Ev-teeva, Mak-sim Miro-nenko, Ivan
  []
@@ -437,7 +550,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--59
 
 
 
-[4
+[6
 
 ] (main.aux)
  ***********
@@ -445,20 +558,20 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-10-09>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B761B4962B04C3737815F519D5AAF0DE;1506.
+(rerunfilecheck)             Checksum: 8EA0436FB2412FAA6C1CC3ACE663C3EF;1959.
  ) 
 Here is how much of TeX's memory you used:
- 14080 strings out of 468080
- 227837 string characters out of 5425772
- 681952 words of memory out of 5000000
- 42303 multiletter control sequences out of 15000+600000
- 665840 words of font info for 226 fonts, out of 8000000 for 9000
+ 14885 strings out of 468080
+ 239008 string characters out of 5425772
+ 694105 words of memory out of 5000000
+ 43052 multiletter control sequences out of 15000+600000
+ 674506 words of font info for 253 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,10n,93p,1109b,548s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (4 pages, 101132 bytes).
+ 90i,10n,93p,1112b,597s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/chill/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (6 pages, 290765 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 37481 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
+ 46224 words of extra memory for PDF output out of 51595 (max. 10000000)
 
