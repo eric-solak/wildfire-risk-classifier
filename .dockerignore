@@ -1,0 +1,11 @@
+src/
+docs/
+.git/
+train_and_export.py
+render.yaml
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+*.ipynb
+*.md
+.dockerignore

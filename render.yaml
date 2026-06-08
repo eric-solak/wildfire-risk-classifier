@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: wildfire-risk-classifier
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
